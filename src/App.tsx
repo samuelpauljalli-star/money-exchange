@@ -398,7 +398,9 @@ function OTPScreen({
         {digits.map((d, i) => (
           <input
             key={i}
-            ref={(el) => (inputRefs.current[i] = el)}
+            ref={(el) => {
+              inputRefs.current[i] = el;
+            }}
             type="tel"
             maxLength={1}
             value={d}
